@@ -1,8 +1,7 @@
 import streamlit as st
 import requests
 
-API_KEY = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}"
-
+API_KEY = "fbe6ba32126407a59e4d8367af7405be"
 
 def convert_to_celcius(temperature_in_kelvin):
     return temperature_in_kelvin - 273.15
@@ -11,7 +10,6 @@ def convert_to_celcius(temperature_in_kelvin):
 def find_current_weather(city):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_data = requests.get(base_url).json()
-    st.json(weather_data)
     try:
         general = weather_data['weather'][0]['main']
         icon_id = weather_data['weather'][0]['icon']
