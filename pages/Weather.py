@@ -1,35 +1,25 @@
 import streamlit as st
-import requests
+import time
 
-API_KEY = "XXXXXXXXXXXXXXXXX"
+def count_down(ts):
+    #with st.empty():
+    while ts:
+        mins, secs = divmod(ts,60)
+        time_now = '{:02d}:{:02d}'.format(mins,secs)
+        st.header(time_now)
+        time.sleep(1)
+        ts -= 1
+    st.header("Time up!!")
 
-
-def find_current_weather(city):
-    base_url = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid="
-    weather_data = requests.get(base_url).json()
-    try:
-        general = weather_data['weather'][0]['main']
-        icon_id = weather_data['weather'][0]['icon']
-        temperature = round(weather_data['main']['temp'])
-        icon = f"http://openweathermap.org/img/wn/{icon_id}@2x.png"
-    except KeyError:
-        st.error("City Not Found")
-        st.stop()
-    return general, temperature, icon
 
 
 def main():
-    st.header("Find the Weather")
-    city = st.text_input("Enter the City").lower()
-    if st.button("Find"):
-        general, temperature, icon = find_current_weather(city)
-        col_1, col_2 = st.columns(2)
-        with col_1:
-            st.metric(label="Temperature", value=f"{temperature}°C")
-        with col_2:
-            st.write(general)
-            st.image(icon)
+    st.title("Pomodoro Timer")
+    time_in_minutes = st.number_input("Enter the time in minutes",min_value = 1,value = 25)
+    time_in_seconds = time_in_minutes*60
+    if st.button("START"):
+        count_down(time_in_seconds)
 
 
-if __name__ == '__main__':
+if __name__ =='__main__':
     main()
