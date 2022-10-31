@@ -38,14 +38,6 @@ def get_hist_data(lat,lon,start):
 st.header('Streamlit Weather Report')
 st.markdown('https://openweathermap.org/api')
 
-im1, im2 = st.columns(2)
-with im2:
-    image0 = 'random4.jpg'
-    st.image(image0, use_column_width=True, caption='Somewhere in The Netherlands.')
-with im1:
-    image1 = 'OPENWEATHER.png'
-    st.image(image1, caption='We will use Open Weather Map API as our Data Resource.', use_column_width=True)
-
 col1, col2 = st.columns(2)
 
 with col1:
