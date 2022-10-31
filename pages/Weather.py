@@ -5,7 +5,7 @@ API_KEY = "XXXXXXXXXXXXXXXXX"
 
 
 def find_current_weather(city):
-    base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+    base_url = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid="
     weather_data = requests.get(base_url).json()
     try:
         general = weather_data['weather'][0]['main']
