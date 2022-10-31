@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-API_KEY = "XXXXXXXXXXXXXXXXX"
+API_KEY = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}"
 
 
 def convert_to_celcius(temperature_in_kelvin):
