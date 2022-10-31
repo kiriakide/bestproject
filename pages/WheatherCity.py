@@ -10,9 +10,10 @@ def find_current_weather(city):
     st.json(weather_data)
 
 
-
 def main():
     st.header("Find the Weather")
     city = st.text_input("Enter the City").lower()
     if st.button("Find"):
         general, temperature, icon = find_current_weather(city)
+
+
