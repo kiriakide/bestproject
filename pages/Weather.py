@@ -7,7 +7,7 @@ url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
 url_1 = 'https://api.openweathermap.org/data/2.5/onecall/timemachine?lat={}&lon={}&dt={}&appid={}'
 
 def getweather(city):
-    result = requests.get(url.format(city,api_key))
+    result = requests.get(url.format(city))
     if result:
         json = result.json()
         #st.write(json)
@@ -26,7 +26,7 @@ def getweather(city):
         print("error in search !")
 
 def get_hist_data(lat,lon,start):
-    res = requests.get(url_1.format(lat,lon,start,api_key))
+    res = requests.get(url_1.format(lat,lon,start))
     data = res.json()
     temp = []
     for hour in data["hourly"]:
