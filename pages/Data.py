@@ -1,16 +1,13 @@
 import streamlit as st
-from PIL import Image
 import pandas as pd
-import base64
 import requests
-import json
-import time
 
-image = Image.open('logo.jpg')
-
-st.image(image, width = 500)
-
-st.title('Crypto Price App')
-st.markdown("""
-This app retrieves cryptocurrency prices for the top 100 cryptocurrency from the **CoinMarketCap**!
-""")
+# replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
+url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo'
+r = requests.get(url)
+data = r.json()
+#st.json(data)
+name = data['Meta Data']['2. Symbol']
+open = data['Time Series (Daily)']['2022-10-28']['1. open']
+st.write(name)
+st.write(open)
