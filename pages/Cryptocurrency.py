@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import pandas as pd
 
 #Headings
 st.set_page_config(page_title="Crypto", page_icon=":coin:", layout="wide" )
@@ -30,12 +31,13 @@ def round_value(input_value):
 col1, col2, col3 = st.columns(3)
 
 # Widget (Cryptocurrency selection box)
-col1_selection = st.sidebar.selectbox('Price 1', df.symbol, list(df.symbol).index('BTCBUSD') )
-col2_selection = st.sidebar.selectbox('Price 2', df.symbol, list(df.symbol).index('ETHBUSD') )
-col3_selection = st.sidebar.selectbox('Price 3', df.symbol, list(df.symbol).index('BNBBUSD') )
-col4_selection = st.sidebar.selectbox('Price 4', df.symbol, list(df.symbol).index('XRPBUSD') )
-col5_selection = st.sidebar.selectbox('Price 5', df.symbol, list(df.symbol).index('ADABUSD') )
-col6_selection = st.sidebar.selectbox('Price 6', df.symbol, list(df.symbol).index('DOGEBUSD') )
-col7_selection = st.sidebar.selectbox('Price 7', df.symbol, list(df.symbol).index('SHIBBUSD') )
-col8_selection = st.sidebar.selectbox('Price 8', df.symbol, list(df.symbol).index('DOTBUSD') )
-col9_selection = st.sidebar.selectbox('Price 9', df.symbol, list(df.symbol).index('MATICBUSD') )
+col1_selection = st.sidebar.selectbox('Price 1', url.symbol, list(url.symbol).index('BTCBUSD') )
+col2_selection = st.sidebar.selectbox('Price 2', url.symbol, list(url.symbol).index('ETHBUSD') )
+col3_selection = st.sidebar.selectbox('Price 3', url.symbol, list(url.symbol).index('BNBBUSD') )
+col4_selection = st.sidebar.selectbox('Price 4', url.symbol, list(url.symbol).index('XRPBUSD') )
+col5_selection = st.sidebar.selectbox('Price 5', url.symbol, list(url.symbol).index('ADABUSD') )
+col6_selection = st.sidebar.selectbox('Price 6', url.symbol, list(url.symbol).index('DOGEBUSD') )
+col7_selection = st.sidebar.selectbox('Price 7', url.symbol, list(url.symbol).index('SHIBBUSD') )
+col8_selection = st.sidebar.selectbox('Price 8', url.symbol, list(url.symbol).index('DOTBUSD') )
+col9_selection = st.sidebar.selectbox('Price 9', url.symbol, list(url.symbol).index('MATICBUSD') )
+
