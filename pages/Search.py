@@ -2,10 +2,8 @@ import streamlit as st
 import requests
 
 st.write(""" 
-Stocks prices 
+Covid Update
 """)
-
-Search = st.text_input('Search')
 
 url = "https://covid-19-statistics.p.rapidapi.com/reports/total"
 
