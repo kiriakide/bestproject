@@ -16,5 +16,5 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 
-st.write (response.text)
+st.write(response.text)
 
