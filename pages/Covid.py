@@ -21,6 +21,7 @@ covid_data = response.json()
 st.write(covid_data)
 
 #Ta vazo sto stremlit
+st.metric(label="Last Updated:", value= (covid_data["data"]["last_update"]))
 
 col1,col2,col3 = st.columns(3)
 
