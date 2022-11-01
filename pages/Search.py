@@ -1,6 +1,5 @@
 import streamlit as st
 from altair import datasets
-import datasets
 import requests
 
 st.write(""" 
