@@ -18,6 +18,7 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 covid_data = response.json()
 st.write(covid_data)
 
+try:
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Temperature", "70 °F", "1.2 °F")
