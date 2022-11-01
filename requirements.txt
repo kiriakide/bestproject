@@ -1,0 +1,7 @@
+numpy
+pandas
+plotly.express
+streamlit
+web3
+yfinance
+cufflinks==0.17.3
