@@ -1,6 +1,18 @@
 import streamlit as st
 import requests
 
+#Headings
+st.set_page_config(page_title="Covid Cases", page_icon=":virus:", layout="wide" )
+
+with st.container():
+    st.title ("Covid Cases 🦠")
+    st.subheader("hey")
+
+st.sidebar.success("select a page above")
+
+
+
+
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
 
 def convert_to_celcius(temperature_in_kelvin):
