@@ -7,6 +7,7 @@ url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&a
 r = requests.get(url)
 data = r.json()
 st.write(data)
+
 #st.json(data)
 name = data['Meta Data']['2. Symbol']
 open = data['Time Series (Daily)']['2022-10-28']['1. open']
