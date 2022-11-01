@@ -6,10 +6,9 @@ st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide" )
 
 with st.container():
     st.title ("Weather Indicator")
-    st.subheader(":snowflake: :umbrella: :sunny: ")
+    st.subheader(":snowflake: :umbrella: :sunny: :cloud: ")
 
 st.sidebar.success("select a page above")
-
 
 
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
