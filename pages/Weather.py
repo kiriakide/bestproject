@@ -34,9 +34,8 @@ def find_current_weather(city):
     return general, temperature, icon
 
 def main():
-    st.header("Find the Weather")
     city = st.text_input("Enter the City").lower()
-    if st.button("Find"):
+    if st.button("Search Weather!:snowflake:"):
         general, temperature, icon = find_current_weather(city)
         col_1, col_2 = st.columns(2)
         with col_1:
