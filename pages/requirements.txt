@@ -1,0 +1,3 @@
+import yfinance
+import matplolib.pyplot
+matplolib==3.4.3
