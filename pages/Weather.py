@@ -10,7 +10,6 @@ def convert_to_celcius(temperature_in_kelvin):
 def find_current_weather(city):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_data = requests.get(base_url).json()
-    st.json(weather_data)
     try:
         general = weather_data['weather'][0]['main']
         icon_id = weather_data['weather'][0]['icon']
