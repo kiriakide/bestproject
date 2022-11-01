@@ -10,9 +10,14 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-# replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-url = 'https://www.alphavantage.co/query?function=CRYPTO_INTRADAY&symbol=ETH&market=USD&interval=5min&apikey=demo'
-response = requests.get(url)
+url = "https://gas-price.p.rapidapi.com/europeanCountries"
+
+headers = {
+	"X-RapidAPI-Key": "042e82a4c2msh38a9f638f7c9e75p141557jsn7c288a2c34e7",
+	"X-RapidAPI-Host": "gas-price.p.rapidapi.com"
+}
+
+response = requests.request("GET", url, headers=headers)
 crypto_data = response.json()
 st.write(crypto_data)
 
