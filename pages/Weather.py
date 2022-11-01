@@ -5,8 +5,8 @@ import requests
 st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide" )
 
 with st.container():
-    st.title (":umbrella: Weather Indicator :sunny: ")
-    st.subheader("hey")
+    st.title ("Weather Indicator")
+    st.subheader(":snowflake: :umbrella: :sunny: ")
 
 st.sidebar.success("select a page above")
 
@@ -35,7 +35,7 @@ def find_current_weather(city):
 
 def main():
     city = st.text_input("Enter the City").lower()
-    if st.button("Search Weather!:snowflake:"):
+    if st.button("Search Weather!"):
         general, temperature, icon = find_current_weather(city)
         col_1, col_2 = st.columns(2)
         with col_1:
