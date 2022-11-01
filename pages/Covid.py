@@ -24,7 +24,7 @@ st.write(covid_data)
 
 col1,col2,col3 = st.columns(3)
 
-with col1: st.metric(label="deaths", value= f'{covid_data["deaths"]}')
-with col2: st.metric(label="wind_kph", value= f'{covid_data["recovered"]}')
-with col3: st.metric(label="wind_kph", value= f'{covid_data["active"]}')
+with col1:st.metric(label="deaths", value= f'{covid_data["data"],["deaths"]}')
+with col2:st.metric(label="wind_kph", value= f'{covid_data["data"],["recovered"]}')
+with col3:st.metric(label="wind_kph", value= f'{covid_data["data"],["active"]}')
 
