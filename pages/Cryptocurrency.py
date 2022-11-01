@@ -11,10 +11,8 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-url = "https://api.binance.com/api/v3/ticker/24hr"
-r = requests.get(url)
-data = r.json()
-st.write(data)
+df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
+
 
 # Custom function for rounding values
 def round_value(input_value):
@@ -25,4 +23,4 @@ def round_value(input_value):
     return a
 
 st.header('**All Price**')
-st.dataframe(url)
+st.dataframe(df)
