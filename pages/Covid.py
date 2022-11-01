@@ -5,7 +5,7 @@ import requests
 st.set_page_config(page_title="Covid Cases", page_icon=":virus:", layout="wide" )
 
 with st.container():
-    st.title ("HealthCoach :heart: :running:")
+    st.title ("	Covid Cases :virus: ")
     st.subheader("hey")
 
 st.sidebar.success("select a page above")
