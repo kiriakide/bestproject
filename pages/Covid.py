@@ -15,6 +15,6 @@ headers = {
 }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
-data = response.json()
-st.write(data)
+covid_data = response.json()
+st.write(covid_data)
 
