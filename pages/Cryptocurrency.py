@@ -9,18 +9,11 @@ with st.container():
     st.subheader("Find out ")
 
 st.sidebar.success("select a page above")
-url = "https://the-cocktail-db.p.rapidapi.com/search.php"
 
-querystring = {"s":"vodka"}
-
-headers = {
-	"X-RapidAPI-Key": "042e82a4c2msh38a9f638f7c9e75p141557jsn7c288a2c34e7",
-	"X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-crypto_data = response.json()
-st.write(crypto_data)
+url = "https://api.binance.com/api/v3/ticker/24hr"
+r = requests.get(url)
+data = r.json()
+st.write(data)
 
 option = st.selectbox ('Select currency for price', ('USD', 'BTC', 'ETH'))
 st.write('You selected',option)
