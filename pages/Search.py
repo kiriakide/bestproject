@@ -1,12 +1,11 @@
 import streamlit as st
-from altair import datasets
 import requests
 
 st.write(""" 
 Stocks prices 
 """)
 
-st.text_input('Search')
+Search = st.text_input('Search')
 
 url = "https://covid-19-statistics.p.rapidapi.com/reports/total"
 
@@ -19,5 +18,5 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 
-print(response.text)
+st.write (response.text)
 
