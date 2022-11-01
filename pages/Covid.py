@@ -15,6 +15,6 @@ headers = {
 }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
-
-st.write(response.text)
+data = response.json()
+st.write(data)
 
