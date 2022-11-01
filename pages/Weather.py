@@ -2,14 +2,13 @@ import streamlit as st
 import requests
 
 #Headings
-st.set_page_config(page_title="Covid Cases", page_icon=":virus:", layout="wide" )
+st.set_page_config(page_title="Weather", page_icon=":sun:", layout="wide" )
 
 with st.container():
     st.title ("Covid Cases 🦠")
     st.subheader("hey")
 
 st.sidebar.success("select a page above")
-
 
 
 
