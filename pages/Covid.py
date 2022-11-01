@@ -19,7 +19,6 @@ headers = {
 response = requests.request("GET", url, headers=headers, params=querystring)
 covid_data = response.json()
 st.write(covid_data)
-#orizo metavlites
 
 #Ta vazo sto stremlit
 
@@ -30,5 +29,5 @@ with col1:
 with col2:
 	st.metric(label="recovered", value=(covid_data["data"]["recovered"]))
 with col3:
-	st.metric(label="active", value=(covid_data["data"]["active"]))
+	st.metric(label="active", value=(covid_data["data"]["active"]), delta="2,2")
 
