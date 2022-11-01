@@ -10,13 +10,15 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-url = "https://coinranking1.p.rapidapi.com/coins"
 
-querystring = {"referenceCurrencyUuid":"yhjMzLPhuIDl","timePeriod":"24h","tiers[0]":"1","orderBy":"marketCap","orderDirection":"desc","limit":"50","offset":"0"}
+url = "https://bravenewcoin.p.rapidapi.com/ohlcv"
+
+querystring = {"size":"10"}
 
 headers = {
+	"Authorization": "Bearer <append token here>",
 	"X-RapidAPI-Key": "042e82a4c2msh38a9f638f7c9e75p141557jsn7c288a2c34e7",
-	"X-RapidAPI-Host": "coinranking1.p.rapidapi.com"
+	"X-RapidAPI-Host": "bravenewcoin.p.rapidapi.com"
 }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
