@@ -2,9 +2,14 @@ import streamlit as st
 import requests
 
 #Headings
-st.write(""" 
-Covid Cases
-""")
+st.set_page_config(page_title="Covid Cases", page_icon=":virus:", layout="wide" )
+
+with st.container():
+    st.title ("HealthCoach :heart: :running:")
+    st.subheader("hey")
+
+st.sidebar.success("select a page above")
+
 
 #Prostheto to API
 url = "https://covid-19-statistics.p.rapidapi.com/reports/total"
