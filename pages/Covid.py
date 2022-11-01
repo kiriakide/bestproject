@@ -3,7 +3,7 @@ import requests
 
 #Headings
 st.write(""" 
-Covid Update
+Covid Cases
 """)
 
 #Prostheto to API
@@ -26,9 +26,9 @@ st.metric(label="Last Updated:", value= (covid_data["data"]["last_update"]))
 col1,col2,col3 = st.columns(3)
 
 with col1:
-	st.metric(label="deaths", value=(covid_data["data"]["deaths"]), delta="7300")
+	st.metric(label="Deaths", value=(covid_data["data"]["deaths"]), delta="7300")
 with col2:
-	st.metric(label="recovered", value=(covid_data["data"]["recovered"]), delta="23539")
+	st.metric(label="Recovered", value=(covid_data["data"]["recovered"]), delta="23539")
 with col3:
-	st.metric(label="active", value=(covid_data["data"]["active"]), delta="50156")
+	st.metric(label="Active", value=(covid_data["data"]["active"]), delta="50156")
 
