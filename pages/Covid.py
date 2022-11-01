@@ -29,5 +29,5 @@ with col1:
 with col2:
 	st.metric(label="recovered", value=(covid_data["data"]["recovered"]))
 with col3:
-	st.metric(label="active", value=(covid_data["data"]["active"]), delta=["data"]["active_diff"])
+	st.metric(label="active", value=(covid_data["data"]["active"]), delta="50156")
 
