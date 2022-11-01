@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 #Headings
-st.set_page_config(page_title="Covid Cases", page_icon="🦠", layout="wide" )
+st.set_page_config(page_title="Covid Cases", page_icon=":anger:", layout="wide" )
 
 with st.container():
     st.title ("Covid Cases 🦠")
