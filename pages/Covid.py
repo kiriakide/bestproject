@@ -25,9 +25,9 @@ st.write(covid_data)
 col1,col2,col3 = st.columns(3)
 
 with col1:
-	st.metric(label="deaths", value=(covid_data["data"]["deaths"]))
+	st.metric(label="deaths", value=(covid_data["data"]["deaths"]), delta="7300")
 with col2:
-	st.metric(label="recovered", value=(covid_data["data"]["recovered"]))
+	st.metric(label="recovered", value=(covid_data["data"]["recovered"]), delta="23539")
 with col3:
 	st.metric(label="active", value=(covid_data["data"]["active"]), delta="50156")
 
