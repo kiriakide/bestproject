@@ -12,9 +12,8 @@ def count_down(ts):
     st.header("Time up!!")
 
 
-
 def main():
-    st.title("Pomodoro Timer")
+    st.title("Timer")
     time_in_minutes = st.number_input("Enter the time in minutes",min_value = 1,value = 25)
     time_in_seconds = time_in_minutes*60
     if st.button("START"):
