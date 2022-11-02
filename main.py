@@ -10,8 +10,8 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("_Assignment 1_")
 with col2:
-    st.markdown('Kiriaki Georgiou',)
+    st.subheader('Kiriaki Georgiou',)
 
-st.caption
+st.markdown("CEI 521  Advanced Topics in Software Engineering ")
 
 st.sidebar.success("select a widget above")
