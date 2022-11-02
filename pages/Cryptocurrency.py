@@ -5,9 +5,9 @@ import pandas as pd
 st.set_page_config(page_title="Crypto", page_icon="🪙", layout="wide" )
 st.sidebar.success("select a page above")
 
-with st.container():
-    st.title ("Cryptocurrency Prices 🪙")
-    st.markdown("Retrieve the market price of cryptocurrency exchange directly from **Binance Website**")
+
+st.title ("Cryptocurrency Prices 🪙")
+st.markdown("Retrieve the market price of cryptocurrency exchange directly from **Binance Website**")
 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
