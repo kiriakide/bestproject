@@ -17,7 +17,5 @@ st.header('**Table**')
 st.dataframe(df)
 
 # Widget (Cryptocurrency selection box)
-Select_a_coin = st.selectbox('Price 1', df.symbol, list(df.symbol).index('BTCBUSD') )
-col2_selection = st.sidebar.selectbox('Price 2', df.symbol, list(df.symbol).index('ETHBUSD') )
-col3_selection = st.sidebar.selectbox('Price 3', df.symbol, list(df.symbol).index('BNBBUSD') )
-
+Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD') )
+Select_a_coin2 = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD') )
