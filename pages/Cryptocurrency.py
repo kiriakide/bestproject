@@ -7,6 +7,7 @@ st.sidebar.success("select a page above")
 
 
 st.title ("Cryptocurrency Prices 🪙")
+st.caption("This is an interactive widget")
 st.markdown("Retrieve the market price of cryptocurrency exchange directly from **Binance Website**")
 
 #API
