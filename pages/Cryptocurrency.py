@@ -21,5 +21,6 @@ col1, col2 = st.columns(2)
 with col1:
     st.checkbox("Disable selection of coin", key="disabled")
 
-Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD'), disabled=st.session_state.disabled,)
-Select_a_coin2 = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBUSD'))
+with col2:
+    Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD'), disabled=st.session_state.disabled,)
+    Select_a_coin2 = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBUSD'))
