@@ -2,12 +2,13 @@ import streamlit as st
 import requests
 
 #PageTitle&sidebar
-st.set_page_config(page_title="Crypto", page_icon="🪙", layout="wide" )
+st.set_page_config(page_title="Calculator", page_icon="🪙", layout="wide" )
 st.sidebar.success("select a page above")
 
 #Heading
-st.title ("Cryptocurrency Prices 🪙")
-st.markdown("Retrieve the market price of cryptocurrency exchange directly from **Binance Website**")
+st.title ("Calculator🪙")
+st.markdown("Give two numbers and get the result of the addition")
+st.markdown("This widget was done with AWS Function")
 
 st.subheader("Select an Exchange Crypto Price to Trade")
 
