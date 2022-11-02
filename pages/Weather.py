@@ -34,9 +34,11 @@ def find_current_weather(city):
         st.stop()
     return general, temperature, icon
 
+st.subheader = ("How's the weather today?")
+
 def main():
     city = st.text_input("Enter the City").lower()
-    if st.button("how's the weather today?"):
+    if st.button("Search!"):
         general, temperature, icon = find_current_weather(city)
         col_1, col_2 = st.columns(2)
         with col_1:
