@@ -1,6 +1,5 @@
 import streamlit as st
 import time
-import yfinance as yf
 
 def count_down(ts):
     with st.empty():
