@@ -6,8 +6,8 @@ st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide")
 
 with st.container():
     st.title(":snowflake: :umbrella: Weather Indicator :sunny: :cloud:")
-    st.caption("This is an interactive widget")
-    st.markdown("Give the city to find out about the wheather there")
+    st.caption("This is an interactive widget & retrieved data from **Open weather Website**")
+    st.markdown("Give the city to find out about the weather there")
 
 st.sidebar.success("select a page above")
 
