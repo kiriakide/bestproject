@@ -5,8 +5,10 @@ import requests
 st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide" )
 
 with st.container():
-    st.title ("Weather Indicator")
-    st.subheader(":snowflake: :umbrella: :sunny: :cloud: ")
+    st.title (":snowflake: :umbrella: Weather Indicator :sunny: :cloud:")
+    st.caption("This is an interactive widget")
+    st.markdown("Give the city to find out about the wheather there")
+
 
 st.sidebar.success("select a page above")
 
