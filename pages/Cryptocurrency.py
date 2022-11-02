@@ -21,5 +21,5 @@ def round_value(input_value):
         a = float(round(input_value, 8))
     return a
 
-st.header('**All Price**')
+st.header('**Table**')
 st.dataframe(df)
