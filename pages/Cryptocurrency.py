@@ -11,7 +11,7 @@ with st.container():
 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
-st.header('**Cryptocurrencies prices table**')
+st.subheader('**Cryptocurrencies prices table**')
 st.dataframe(df)
 
 col1, col2 = st.columns(2)
