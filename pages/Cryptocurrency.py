@@ -19,9 +19,7 @@ st.dataframe(df)
 # Widget (Cryptocurrency selection box)
 col1, col2 = st.columns(2)
 with col1:
-    st.checkbox("Disable selectbox fo", key="disabled")
-
-disabled=st.session_state.disabled,
+    st.checkbox("Disable selection of coin", key="disabled")
 
 Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD'), disabled=st.session_state.disabled,)
 Select_a_coin2 = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBUSD'))
