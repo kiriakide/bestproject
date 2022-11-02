@@ -3,17 +3,18 @@ import pandas as pd
 
 #Headings
 st.set_page_config(page_title="Crypto", page_icon=":coin:", layout="wide" )
+st.sidebar.success("select a page above")
 
 with st.container():
     st.title ("Cryptocurrency")
-    st.subheader("Find out ")
+    st.subheader("Retrieve the market price of cryptocurrency")
 
-st.sidebar.success("select a page above")
+
 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
 
-st.header('**Table**')
+st.header('**Cryptocurrencies prices table**')
 st.dataframe(df)
 
 # Widget (Cryptocurrency selection box)
