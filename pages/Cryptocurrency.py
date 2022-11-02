@@ -22,3 +22,19 @@ with col1:
 with col2:
     Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('BTCBUSD'), disabled=st.session_state.disabled,)
     Select_a_coin2 = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBUSD'))
+
+
+col1_df = df[df.symbol == Select_a_coin]
+
+def round_value(input_value):
+    if input_value.values > 1:
+        a = float(round(input_value, 2))
+    else:
+        a = float(round(input_value, 8))
+    return a
+
+col1_price = round_value(col1_df.weightedAvgPrice)
+
+col1_percent = f'{float(col1_df.priceChangePercent)}%'
+
+col1.metric(Select_a_coin, col1_price, col1_percent)
