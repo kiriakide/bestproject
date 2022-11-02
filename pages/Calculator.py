@@ -7,7 +7,7 @@ st.sidebar.success("select a page above")
 
 #Heading
 st.title ("Calculator🪙")
-st.caption("This is an interactive widget & was done with AWS Function")
+st.caption("This is an interactive widget & was deployed in AWS Function")
 st.markdown("Give two numbers and get the result of the addition")
 
 
