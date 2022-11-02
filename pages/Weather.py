@@ -33,11 +33,11 @@ def find_current_weather(city):
         st.stop()
     return general, temperature, icon
 
-st.header("Select an Exchange Crypto Price to Trade")
+st.header("Search here about the weather")
 
 def main():
     city = st.text_input("Enter the City").lower()
-    if st.button("Search!"):
+    if st.button("How's the weather?"):
         general, temperature, icon = find_current_weather(city)
         col_1, col_2 = st.columns(2)
         with col_1:
