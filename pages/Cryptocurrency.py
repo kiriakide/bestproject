@@ -6,13 +6,10 @@ st.set_page_config(page_title="Crypto", page_icon=":coin:", layout="wide" )
 st.sidebar.success("select a page above")
 
 with st.container():
-    st.title ("Cryptocurrency")
-    st.subheader("Retrieve the market price of cryptocurrency")
-
-
+    st.title ("Cryptocurrency Prices")
+    st.subheader("Retrieve the market price of cryptocurrency directly from Binance Website")
 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
-
 
 st.header('**Cryptocurrencies prices table**')
 st.dataframe(df)
