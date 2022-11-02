@@ -15,3 +15,8 @@ with col2:
 st.markdown("CEI 521 Advanced Topics in Software Engineering ")
 
 st.sidebar.success("select a widget above")
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
+

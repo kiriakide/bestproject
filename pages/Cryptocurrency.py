@@ -7,7 +7,7 @@ st.sidebar.success("select a page above")
 
 with st.container():
     st.title ("Cryptocurrency Prices 🪙")
-    st.subheader("Retrieve the market price of cryptocurrency directly from Binance Website")
+    st.markdown("Retrieve the market price of cryptocurrency directly from Binance Website")
 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
