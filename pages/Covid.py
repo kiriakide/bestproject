@@ -6,7 +6,7 @@ st.set_page_config(page_title="Covid Cases", page_icon=":anger:", layout="wide" 
 
 with st.container():
     st.title ("Covid Cases 🦠")
-    st.subheader("Get the latest data about covid")
+    st.header("Get the latest data about covid")
 
 st.sidebar.success("select a page above")
 

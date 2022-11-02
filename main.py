@@ -8,9 +8,9 @@ with st.container():
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("_Assignment 1_")
+    st.header("_Assignment 1_")
 with col2:
-    st.subheader('_Kiriaki Georgiou_')
+    st.header('_Kiriaki Georgiou_')
 
 st.markdown("CEI 521 Advanced Topics in Software Engineering ")
 

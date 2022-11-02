@@ -11,7 +11,7 @@ st.caption("This is an interactive widget & was deployed in AWS Function")
 st.markdown("Give two numbers and get the result of the addition")
 
 
-st.subheader("Insert 2 Numbers")
+st.header("Insert 2 Numbers")
 
 #InsertNumbers
 number1 = st.number_input('Insert a number1')
