@@ -27,7 +27,7 @@ with col2:
     Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBTC'),
                                  disabled=st.session_state.disabled,)
 
-coindf = df[df.symbol == Select_a_coin]
+coin_selected = df[df.symbol == Select_a_coin]
 
 #Roundthenumbers
 def round_value(input_value):
@@ -37,9 +37,10 @@ def round_value(input_value):
         a = float(round(input_value, 8))
     return a
 
+#Showtheselection
 
-coin_price = round_value(coindf.weightedAvgPrice)
+coin_price = round_value(coin_selected.weightedAvgPrice)
 
-coin_percent = f'{float(coindf.priceChangePercent)}%'
+coin_percent = f'{float(coin_selected.priceChangePercent)}%'
 
 col1.metric(Select_a_coin, coin_price, coin_percent)
