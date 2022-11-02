@@ -18,7 +18,7 @@ st.subheader('**Market Activity Table**')
 st.dataframe(df)
 
 #WidgetForCrryptoSelection
-st.subheader("Select an Exchange Crypto Price to Trade")
+st.header("Select an Exchange Crypto Price to Trade")
 
 col1, col2 = st.columns(2)
 with col1:
