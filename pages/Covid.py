@@ -11,7 +11,7 @@ with st.container():
 st.sidebar.success("select a page above")
 
 
-#Prostheto to API
+#API
 url = "https://covid-19-statistics.p.rapidapi.com/reports/total"
 
 querystring = {"date":"2020-04-07"}

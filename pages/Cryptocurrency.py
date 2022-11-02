@@ -9,11 +9,14 @@ st.sidebar.success("select a page above")
 st.title ("Cryptocurrency Prices 🪙")
 st.markdown("Retrieve the market price of cryptocurrency exchange directly from **Binance Website**")
 
+#API
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
+#MarketTable
 st.subheader('**Market Activity Table**')
 st.dataframe(df)
 
+#WidgetForCrryptoSelection
 st.subheader("Select an Exchange Crypto Price to Trade")
 
 col1, col2 = st.columns(2)
@@ -24,10 +27,9 @@ with col2:
     Select_a_coin = st.selectbox('Select a coin', df.symbol, list(df.symbol).index('ETHBTC'),
                                  disabled=st.session_state.disabled,)
 
+coindf = df[df.symbol == Select_a_coin]
 
-col1_df = df[df.symbol == Select_a_coin]
-
-
+#Roundthenumbers
 def round_value(input_value):
     if input_value.values > 1:
         a = float(round(input_value, 2))
@@ -36,8 +38,8 @@ def round_value(input_value):
     return a
 
 
-col1_price = round_value(col1_df.weightedAvgPrice)
+coin_price = round_value(coindf.weightedAvgPrice)
 
-col1_percent = f'{float(col1_df.priceChangePercent)}%'
+coin_percent = f'{float(coindf.priceChangePercent)}%'
 
-col1.metric(Select_a_coin, col1_price, col1_percent)
+col1.metric(Select_a_coin, coin_price, coin_percent)
