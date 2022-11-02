@@ -15,3 +15,9 @@ df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
 st.header('**Table**')
 st.dataframe(df)
+
+# Widget (Cryptocurrency selection box)
+col1_selection = st.sidebar.selectbox('Price 1', df.symbol, list(df.symbol).index('BTCBUSD') )
+col2_selection = st.sidebar.selectbox('Price 2', df.symbol, list(df.symbol).index('ETHBUSD') )
+col3_selection = st.sidebar.selectbox('Price 3', df.symbol, list(df.symbol).index('BNBBUSD') )
+
