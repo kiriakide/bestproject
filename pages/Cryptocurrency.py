@@ -14,7 +14,7 @@ st.markdown("Retrieve the market price of cryptocurrency exchange directly from 
 df = pd.read_json('https://api.binance.com/api/v3/ticker/24hr')
 
 #MarketTable
-st.subheader('**Market Activity Table**')
+st.subheader('**Market Acetivity Table**')
 st.dataframe(df)
 
 #WidgetForCrryptoSelection
