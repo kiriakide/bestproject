@@ -33,8 +33,7 @@ def find_current_weather(city):
         st.stop()
     return general, temperature, icon
 
-
-st.subheader = ("How's the weather today?")
+st.subheader("How's the weather today?")
 
 
 def main():
