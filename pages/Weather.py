@@ -1,19 +1,18 @@
 import streamlit as st
 import requests
 
-#Headings
-st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide" )
+# Headings
+st.set_page_config(page_title="Weather", page_icon=":sunny:", layout="wide")
 
 with st.container():
-    st.title (":snowflake: :umbrella: Weather Indicator :sunny: :cloud:")
+    st.title(":snowflake: :umbrella: Weather Indicator :sunny: :cloud:")
     st.caption("This is an interactive widget")
     st.markdown("Give the city to find out about the wheather there")
 
-
 st.sidebar.success("select a page above")
 
-
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
+
 
 def convert_to_celcius(temperature_in_kelvin):
     return temperature_in_kelvin - 273.15
@@ -34,7 +33,9 @@ def find_current_weather(city):
         st.stop()
     return general, temperature, icon
 
+
 st.subheader = ("How's the weather today?")
+
 
 def main():
     city = st.text_input("Enter the City").lower()
