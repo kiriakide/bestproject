@@ -11,19 +11,17 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
-#API
+#APIkey
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
 
 
-def convert_to_celcius(temperature_in_kelvin):
-    return temperature_in_kelvin - 273.15
-
-
+#Api
 def find_current_weather(city):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_data = requests.get(base_url).json()
 
 
+#dataretrieve
     try:
         weather = weather_data['weather'][0]['main']
         icon_id = weather_data['weather'][0]['icon']
@@ -35,6 +33,10 @@ def find_current_weather(city):
     return weather, temperature, icon
 
 st.header("Search here about the weather")
+
+#converttocelcius
+def convert_to_celcius(temperature_in_kelvin):
+     return temperature_in_kelvin - 273.15
 
 def main():
     city = st.text_input("Enter the City").lower()
