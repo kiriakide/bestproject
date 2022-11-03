@@ -18,7 +18,7 @@ st.write(info.text)
 
 #Widget
 genre = st.radio(
-    "What is Earth?",
+    "Question: What is Earth?",
     ('Book', 'Planet', 'Movie'))
 
 if genre == 'Planet':
