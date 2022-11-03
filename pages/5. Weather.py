@@ -32,12 +32,11 @@ def find_current_weather(city):
         st.stop()
     return weather, temperature, icon
 
-st.header("Search here about the weather")
-
 #converttocelcius
 def convert_to_celcius(temperature_in_kelvin):
      return temperature_in_kelvin - 273.15
 
+st.header("Search here about the weather")
 def main():
     city = st.text_input("Enter the City").lower()
     if st.button("How's the weather?"):
