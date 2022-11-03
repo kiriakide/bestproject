@@ -18,9 +18,9 @@ st.write(info.text)
 
 
 #widget
-Task1 = st.checkbox('I agree')
-Task2 = st.checkbox('I agree')
-Task3 = st.checkbox('I agree')
+Task1 = st.checkbox('Groceries')
+Task2 = st.checkbox('Gym')
+Task3 = st.checkbox('Prepare Lunch')
 
 if Task1:
     st.write('Great!')
