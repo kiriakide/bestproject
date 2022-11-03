@@ -11,6 +11,7 @@ with st.container():
 
 st.sidebar.success("select a page above")
 
+#API
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
 
 
@@ -24,26 +25,26 @@ def find_current_weather(city):
     st.write(weather_data)
 
     try:
-        general = weather_data['weather'][0]['main']
+        weather = weather_data['weather'][0]['main']
         icon_id = weather_data['weather'][0]['icon']
         temperature = round(convert_to_celcius(weather_data['main']['temp']))
         icon = f"http://openweathermap.org/img/wn/{icon_id}@2x.png"
     except KeyError:
         st.error("City Not Found")
         st.stop()
-    return general, temperature, icon
+    return weather, temperature, icon
 
 st.header("Search here about the weather")
 
 def main():
     city = st.text_input("Enter the City").lower()
     if st.button("How's the weather?"):
-        general, temperature, icon = find_current_weather(city)
+        weather, temperature, icon = find_current_weather(city)
         col_1, col_2 = st.columns(2)
         with col_1:
             st.metric(label="Temperature", value=f"{temperature}°C")
         with col_2:
-            st.write(general)
+            st.write(weather)
             st.write(temperature)
             st.image(icon)
 
