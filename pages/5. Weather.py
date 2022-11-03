@@ -22,7 +22,6 @@ def convert_to_celcius(temperature_in_kelvin):
 def find_current_weather(city):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_data = requests.get(base_url).json()
-    st.write(weather_data)
 
 
     try:
@@ -48,7 +47,3 @@ def main():
             st.write(weather)
             st.write(temperature)
             st.image(icon)
-
-
-if __name__ == '__main__':
-    main()
