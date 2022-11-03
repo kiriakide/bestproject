@@ -8,7 +8,7 @@ st.sidebar.success("select a page above")
 #Heading
 st.title ("Select Correct Answer")
 st.caption("This is an interactive widget & was deployed in AWS Function")
-st.markdown("What is Earth?")
+st.markdown("Daily Questions to train your brain")
 
 
 #Function
