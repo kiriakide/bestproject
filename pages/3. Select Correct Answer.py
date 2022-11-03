@@ -21,7 +21,7 @@ genre = st.radio(
     "What is Earth?",
     ('Book', 'Planet', 'Movie'))
 
-if genre == 'Comedy':
-    st.write('You selected comedy.')
+if genre == 'Planet':
+    st.write('Correct!')
 else:
-    st.write("You didn't select comedy.")
+    st.write("Nope try again.")
