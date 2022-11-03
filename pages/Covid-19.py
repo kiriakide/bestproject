@@ -9,4 +9,4 @@ st.write(covid_data)
 col1,col2,col3 = st.columns(3)
 
 with col1:
-    st.metric(label="Deaths", value=(covid_data["regionData"][0-100]["totalDeaths"]), delta="7300")
+    st.metric(label="Deaths", value=(covid_data["regionData"][0-100]["totalDeaths"]), delta=(covid_data["regionData"][0-100]["newDeaths"]))
