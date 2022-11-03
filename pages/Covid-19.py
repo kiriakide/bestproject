@@ -8,9 +8,14 @@ base_url = "https://api.apify.com/v2/key-value-stores/SmuuI0oebnTWjRTUh/records/
 covid_data = requests.get(base_url).json()
 st.write(covid_data)
 
+st.metric(label="Last Updated:", value= (covid_data["data"]["last_update"]))
 
-df = pd.read_json("https://api.apify.com/v2/key-value-stores/SmuuI0oebnTWjRTUh/records/LATEST?disableRedirect=true.")
+col1,col2,col3 = st.columns(3)
 
-#MarketTable
-st.header('**Market Acetivity Table**')
-st.dataframe(df)
+with col1:
+    st.metric(label="Deaths", value=(covid_data["regionData"][0-100]["totalDeaths"]), delta="7300")
+with col2:
+    st.metric(label="Recovered", value=(covid_data["data"]["recovered"]), delta="23539")
+with col3:
+    st.metric(label="Active", value=(covid_data["data"]["active"]), delta="50156")
+
