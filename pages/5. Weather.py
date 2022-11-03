@@ -47,3 +47,7 @@ def main():
             st.write(weather)
             st.write(temperature)
             st.image(icon)
+
+
+if __name__ == '__main__':
+    main()
