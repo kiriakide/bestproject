@@ -18,8 +18,15 @@ st.write(info.text)
 
 
 #widget
-option = st.selectbox(
-    'How would you like to be contacted?',
-    ('Email', 'Home phone', 'Mobile phone'))
+Task1 = st.checkbox('I agree')
+Task2 = st.checkbox('I agree')
+Task3 = st.checkbox('I agree')
 
-st.write('You selected:', option)
+if Task1:
+    st.write('Great!')
+
+if Task2:
+    st.write('Great!')
+
+if Task3:
+    st.write('Great!')
