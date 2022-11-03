@@ -13,7 +13,7 @@ st.sidebar.success("select a page above")
 #Apiimport
 base_url = "https://api.apify.com/v2/key-value-stores/SmuuI0oebnTWjRTUh/records/LATEST?disableRedirect=true."
 covid_data = requests.get(base_url).json()
-st.write(covid_data)
+
 
 #widget
 col1,col2,col3 = st.columns(3)
