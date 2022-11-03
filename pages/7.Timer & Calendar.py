@@ -23,6 +23,7 @@ def main():
 if __name__ =='__main__':
     main()
 
+st.title("Calendar")
 d = st.date_input("Enter your date of birth")
 
 
