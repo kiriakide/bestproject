@@ -7,7 +7,7 @@ st.set_page_config(page_title="Covid Cases", page_icon=":anger:", layout="wide" 
 with st.container():
     st.title ("Covid Cases 🦠")
     st.markdown("Get the latest data about covid-19 around te World")
-    st.markdown("This is a widget made from data of Worldometer")
+    st.markdown("This is a widget that retrieves data directly from **Worldometer website**")
 st.sidebar.success("select a page above")
 
 #Apiimport
