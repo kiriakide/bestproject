@@ -22,3 +22,8 @@ def main():
 
 if __name__ =='__main__':
     main()
+
+d = st.date_input("Enter your date of birth")
+
+
+st.write('Your birthday is:', d)
