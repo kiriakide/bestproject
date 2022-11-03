@@ -14,13 +14,15 @@ st.sidebar.success("select a page above")
 #API
 API_KEY = "fbe6ba32126407a59e4d8367af7405be"
 
+
+def convert_to_celcius(temperature_in_kelvin):
+    return temperature_in_kelvin - 273.15
+
+
 def find_current_weather(city):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
     weather_data = requests.get(base_url).json()
     st.write(weather_data)
-
-def convert_to_celcius(temperature_in_kelvin):
-    return temperature_in_kelvin - 273.15
 
 
     try:
