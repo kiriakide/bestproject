@@ -6,9 +6,9 @@ st.set_page_config(page_title="Calculator", page_icon="🪙", layout="wide" )
 st.sidebar.success("select a page above")
 
 #Heading
-st.title ("Calculator")
+st.title ("Daily Tasks")
 st.caption("This is an interactive widget & was deployed in AWS Function")
-st.markdown("Give two numbers and get the result of the addition")
+st.markdown("Tick as soon as you do a daily task")
 
 
 #Function
