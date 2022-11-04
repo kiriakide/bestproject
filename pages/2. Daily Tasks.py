@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 #PageTitle&sidebar
-st.set_page_config(page_title="Calculator", page_icon="🪙", layout="wide" )
+st.set_page_config(page_title="Daily Tasks", page_icon="", layout="wide" )
 st.sidebar.success("select a page above")
 
 #Heading
