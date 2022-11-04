@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Health Coach", page_icon=":heart:", layout="wide" )
+st.set_page_config(page_title="Assignment1", page_icon=":heart:", layout="wide" )
 
 with st.container():
     st.title ("Application of 6 widgets :heart:")
