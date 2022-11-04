@@ -50,3 +50,23 @@ url1 = "https://gdicyypesekolfiew4kze4i3cy0vylwp.lambda-url.us-east-1.on.aws/?fi
 info = requests.get(url1)
 st.write(info.text)'''
 st.code(code, language='python')
+
+
+code = '''import json
+
+def lambda_handler(event, context):
+
+    param = event["queryStringParameters"]
+    
+    #down
+    num1 = float(param["first"])
+    num2 = float(param["second"])
+    num=num1+num2
+    return_f=f"result: {num}"
+    #up
+    return {
+        'statusCode': 200,
+        'body': f'{return_f}',
+        'headers': { 'Content-Type': "text/html" }
+    }'''
+st.code(code, language='python')
