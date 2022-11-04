@@ -45,3 +45,7 @@ coin_price = round_value(coin_selected.weightedAvgPrice)
 coin_percent = f'{float(coin_selected.priceChangePercent)}%'
 
 col1.metric(Select_a_coin, coin_price, coin_percent)
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')

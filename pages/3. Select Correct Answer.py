@@ -22,3 +22,7 @@ url= "https://qnmv7cfexpjgverograjfduuua0dkkvk.lambda-url.us-east-1.on.aws/?plan
 info = requests.get(url)
 st.write(info.text)
 
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
+

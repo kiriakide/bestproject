@@ -36,3 +36,7 @@ if Task3:
 url= "https://df3ajmtjofdu34xvb2mp3y33ce0wtwii.lambda-url.us-east-1.on.aws/?list=%s" %(tasks)
 info = requests.get(url)
 st.write(info.text)
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')

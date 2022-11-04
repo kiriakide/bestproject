@@ -23,3 +23,7 @@ st.write('The current number is ', number2)
 url1 = "https://gdicyypesekolfiew4kze4i3cy0vylwp.lambda-url.us-east-1.on.aws/?first=%f&second=%f" % (number1, number2)
 info = requests.get(url1)
 st.write(info.text)
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')

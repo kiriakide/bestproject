@@ -28,3 +28,7 @@ d = st.date_input("Enter your date of birth")
 
 
 st.write('Your birthday is:', d)
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')

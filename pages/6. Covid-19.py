@@ -24,3 +24,7 @@ with col2:
     st.metric(label="Deaths", value=(covid_data["regionData"][0-100]["totalDeaths"]), delta=(covid_data["regionData"][0-100]["newDeaths"]))
 with col3:
     st.metric(label="Recovered", value=(covid_data["regionData"][0 - 100]["totalRecovered"]), delta=(covid_data["regionData"][0 - 100]["newRecovered"]))
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')

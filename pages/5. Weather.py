@@ -52,3 +52,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
