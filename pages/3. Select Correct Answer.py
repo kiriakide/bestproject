@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 #PageTitle&sidebar
-st.set_page_config(page_title="Calculator", page_icon="🪙", layout="wide" )
+st.set_page_config(page_title="Select Correct Answer", page_icon="🪙", layout="wide" )
 st.sidebar.success("select a page above")
 
 #Heading
@@ -13,8 +13,8 @@ st.markdown("Daily Questions to train your brain")
 
 #Widget
 genre = st.radio(
-    "Question: What is Earth?",
-    ('Book', 'Earth', 'Movie'))
+    "Question: Which one is a alanet?",
+    ('Moon', 'Earth', 'Movie'))
 
 
 #Function
