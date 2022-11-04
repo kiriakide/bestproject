@@ -11,23 +11,28 @@ st.caption("This is an interactive widget & was deployed in AWS Function")
 st.markdown("Tick as soon as you do a daily task")
 
 
-#Function
-url= "https://df3ajmtjofdu34xvb2mp3y33ce0wtwii.lambda-url.us-east-1.on.aws/?list=" %()
-info = requests.get(url)
-st.write(info.text)
-
-
 #widget
 Task1 = st.checkbox('Groceries')
 Task2 = st.checkbox('Gym')
 Task3 = st.checkbox('Read')
-tasks=Task1+Task2+Task3
-st.write(tasks)
+tasks=""
 if Task1:
-    st.write('Great!')
-
+    if tasks == "":
+        tasks= tasks+"Groceries"
+    else:
+        tasks=tasks+"_Groceries"
 if Task2:
-    st.write('Great!')
-
+    if tasks == "":
+        tasks= tasks+"Gym"
+    else:
+        tasks=tasks+"_Gym"
 if Task3:
-    st.write('Great!')
+    if tasks == "":
+        tasks= tasks+"Read"
+    else:
+        tasks=tasks+"_Read"
+
+#Function
+url= "https://df3ajmtjofdu34xvb2mp3y33ce0wtwii.lambda-url.us-east-1.on.aws/?list=" %(tasks)
+info = requests.get(url)
+st.write(info.text)
