@@ -14,7 +14,7 @@ st.markdown("Daily Questions to train your brain")
 #Widget
 genre = st.radio(
     "Question: What is Earth?",
-    ('Book', 'Planet', 'Movie'))
+    ('Book', 'Earth', 'Movie'))
 
 
 #Function
